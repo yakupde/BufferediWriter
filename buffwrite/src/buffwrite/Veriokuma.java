@@ -19,7 +19,7 @@ public class Veriokuma {
         String line=null;
         
         while ((line=bufferedreader.readLine())!=null) {
-			System.out.println(line);;
+			System.out.println(line+"\n");;
 			
 		}
         

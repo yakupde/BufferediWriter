@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Driver {
 	public static void main(String[] args) {
-		File file=new File("C:\\Users\\stk22\\Desktop\\Data.txt");
+		File file=new File("C:\\Users\\stk22\\Desktop\\deneme.txt");
 		FileWriter fileWriter=null;
 		BufferedWriter bufferedWriter=null;
 		Veriokuma veriokuma=new Veriokuma();
@@ -21,6 +21,8 @@ public class Driver {
 				while (!(line=scanner.nextLine()).equals("q")) {
 					fileWriter.write(line);				
 				}
+				scanner.close();
+			
 			}
 			fileWriter.close();
 		} catch (Exception e) {
@@ -43,7 +45,12 @@ public class Driver {
 						
 			}}
 		}veriokuma.veri();	
+		System.out.println(file.delete());
+		System.out.println(file.canWrite());
 		
+		System.out.println(file.lastModified());
+		System.out.println(file.compareTo(file));
+		System.out.println(file.getName());
 		
 	}
 }
